@@ -46,14 +46,14 @@
             <button class="btn btn-outline-light mb-4" name="submit">Lihat Waktu</button>
             <div class="d-flex justify-content-center">
                 <div class="card bg-dark mr-1">
-                    <div class="card-body ">
-                        <h1 class="text-light" data-aos="zoom-in"><?= $jam; ?></h1>
+                    <div class="card-body " data-aos="flip-down" data-aos-duration="1000">
+                        <h1 class="text-light"><?= $jam; ?></h1>
                     </div>
                 </div>
                 <h1 class="titik">:</h1>
                 <div class="card bg-dark ml-1">
-                    <div class="card-body ">
-                        <h1 class="text-light" data-aos="zoom-in"><?= $menit; ?></h1>
+                    <div class="card-body " data-aos="flip-down" data-aos-duration="1000">
+                        <h1 class="text-light"><?= $menit; ?></h1>
                     </div>
                 </div>
             </div>
@@ -69,8 +69,8 @@
             <div class="bg-secondary py-3 cube">
                 <h3 class="mb-3">Follow Developer</h3>
                 <h6 class="mt-2">
-                    <a href=""><i class="fab fa-github"></i> rejakartans</a> |
-                    <a href=""><i class="fab fa-instagram"></i> reejaditya</a>
+                    <a href="https://github.com/rejakartans/"><i class="fab fa-github"></i> rejakartans</a> |
+                    <a href="https://instagram.com/reejaaditya_?igshid=1ph3ney4sfi66"><i class="fab fa-instagram"></i> reejaditya</a>
                 </h6>
             </div>
         </div>
