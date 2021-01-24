@@ -18,7 +18,7 @@
     <!-- Data aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <title>Date</title>
+    <title>Set Time</title>
 </head>
 
 <body>
@@ -75,12 +75,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
 
 
     <!-- Optional JavaScript -->
