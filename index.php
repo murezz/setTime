@@ -12,11 +12,11 @@
     <!-- SCSS -->
     <link rel="stylesheet" href="style/main.css">
 
-    <!-- Font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-
     <!-- Data aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
 
     <title>Set Time</title>
 </head>
@@ -30,34 +30,42 @@
     if (isset($_POST["submit"])) {
         $jam = date("H");
         $menit = date("i");
+        $ampm = date("A");
         $date = date("d / M / Y");
         $lokasi = true;
     } else {
         $jam = "00";
         $menit = "00";
-        $date = "???";
+        $ampm = "??";
+        $date = "";
     }
 
     ?>
 
     <div class="text-center content">
         <h1 class="text-uppercase text-light mb-4">Set Waktu!</h1>
-        <form action="" method="POST">
+        <form action="" method="POST" class="text-center">
             <button class="btn btn-outline-light mb-4" name="submit">Lihat Waktu</button>
-            <div class="d-flex justify-content-center">
+            <div class="row d-flex <?php if (isset($_POST["submit"])) echo "ml-2" ?> justify-content-center text-center">
                 <div class="card bg-dark mr-1">
                     <div class="card-body " data-aos="flip-down" data-aos-duration="1000">
                         <h1 class="text-light"><?= $jam; ?></h1>
                     </div>
                 </div>
-                <h1 class="titik">:</h1>
+                <h1 class="titik mt-1">:</h1>
                 <div class="card bg-dark ml-1">
                     <div class="card-body " data-aos="flip-down" data-aos-duration="1000">
                         <h1 class="text-light"><?= $menit; ?></h1>
                     </div>
                 </div>
+                <h1 class="titik mt-1 ml-1">:</h1>
+                <div class="card bg-dark ml-1">
+                    <div class="card-body " data-aos="flip-down" data-aos-duration="1000">
+                        <h1 class="text-light"><?= $ampm; ?></h1>
+                    </div>
+                </div>
             </div>
-            <h3 class="mt-3 mb-3 text-light" data-aos="fade-up"><?= $date; ?></h3>
+            <h3 class="mt-3 mb-3 text-light" data-aos="fade-up"><i class="fas fa-calendar-alt"></i> <?= $date; ?></h3>
             <?php if (isset($lokasi)) : ?>
                 <h1 data-aos="fade-up" data-aos-duration="900" class="location"><i class="fas fa-map-marker-alt"></i> Indonesia</h1>
             <?php endif; ?>
